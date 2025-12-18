@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="de">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Mobile Navigation</title>
+</head>
+
+<body>
+    <!-- Hauptinhalt -->
+    <main class="content">
+        <h1>Mobile Navigation Demo</h1>
+        <p>Klicke auf den Button rechts oben, um das Menü zu öffnen.</p>
+    </main>
+
+    <!-- Menu Toggle Button (Rechts oben) -->
+    <button class="menu-toggle" aria-label="Menü öffnen">
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+            <circle cx="12" cy="12" r="1" />
+            <circle cx="12" cy="5" r="1" />
+            <circle cx="12" cy="19" r="1" />
+        </svg>
+    </button>
+
+    <!-- Navigation Overlay -->
+    <nav class="mobile-nav">
+        <!-- Navigation Items -->
+        <a href="#" class="nav-item" data-delay="0">
+            <div class="nav-icon">🏠</div>
+            <span class="nav-label">Home</span>
+        </a>
+        <a href="#" class="nav-item" data-delay="1">
+            <div class="nav-icon">🔍</div>
+            <span class="nav-label">Suchen</span>
+        </a>
+        <a href="#" class="nav-item" data-delay="2">
+            <div class="nav-icon">⭐</div>
+            <span class="nav-label">Favoriten</span>
+        </a>
+        <a href="#" class="nav-item" data-delay="3">
+            <div class="nav-icon">💬</div>
+            <span class="nav-label">Nachrichten</span>
+        </a>
+        <a href="#" class="nav-item" data-delay="4">
+            <div class="nav-icon">⚙️</div>
+            <span class="nav-label">Einstellungen</span>
+        </a>
+        <a href="#" class="nav-item" data-delay="5">
+            <div class="nav-icon">👤</div>
+            <span class="nav-label">Profil</span>
+        </a>
+
+        <a href="#" class="nav-item" data-delay="6">
+            <div class="nav-icon"> </div>
+            <span class="nav-label">Logout</span>
+        </a>
+    </nav>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

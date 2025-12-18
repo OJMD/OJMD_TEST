@@ -1,0 +1,185 @@
+/**
+ * Markdown Preview Styles
+ * Separate CSS für alle Markdown-Elemente in der Preview
+ */
+
+/* ========== ÜBERSCHRIFTEN ========== */
+.markdown-preview h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.markdown-preview h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid var(--color-border);
+    padding-bottom: 0.5rem;
+    color: var(--color-primary);
+}
+
+.markdown-preview h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+.markdown-preview h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: var(--color-text);
+}
+
+/* ========== HORIZONTALE LINIE ========== */
+.markdown-preview hr {
+    border: none;
+    border-top: 2px solid var(--color-border);
+    margin: 2rem 0;
+}
+
+/* ========== PARAGRAPHEN ========== */
+.markdown-preview p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* ========== INLINE FORMATIERUNG ========== */
+.markdown-preview strong {
+    font-weight: 700;
+    color: var(--color-text);
+}
+
+.markdown-preview em {
+    font-style: italic;
+    color: var(--color-text);
+}
+
+.markdown-preview del {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ========== ZITATE ========== */
+.markdown-preview blockquote {
+    border-left: 4px solid var(--color-secondary);
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #666;
+    font-style: italic;
+    background-color: rgba(52, 152, 219, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.markdown-preview blockquote br {
+    display: block;
+    content: "";
+    margin-bottom: 0.5rem;
+}
+
+/* ========== LISTEN ========== */
+.markdown-preview ul,
+.markdown-preview ol {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Unnummerierte Listen */
+.markdown-preview ul {
+    padding-left: 2rem;
+    list-style: disc;
+}
+
+.markdown-preview ul>li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Task-Listen Checkboxen */
+.markdown-preview ul li input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: default;
+    transform: scale(1.2);
+    accent-color: #2563eb;
+}
+
+/* List-Items mit Checkboxen ohne Bullet-Points */
+.markdown-preview ul li:has(input[type="checkbox"]) {
+    list-style: none;
+    margin-left: -2rem;
+    padding-left: 2rem;
+}
+
+/* Nummerierte Listen mit Kreisen */
+.markdown-preview ol {
+    counter-reset: list-counter;
+}
+
+.markdown-preview ol>li {
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.markdown-preview ol>li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 0;
+    top: 0.1rem;
+    width: 2rem;
+    height: 2rem;
+    background-color: var(--color-secondary);
+    color: white;
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-weight: 600;
+    font-size: 0.9rem;
+    flex-shrink: 0;
+}
+
+/* ========== DYNAMISCHE ABSTÄNDE (Leerzeilen) ========== */
+.markdown-preview ol>li.spacing-medium,
+.markdown-preview ul>li.spacing-medium {
+    margin-top: 1.5rem;
+}
+
+.markdown-preview ol>li.spacing-large,
+.markdown-preview ul>li.spacing-large {
+    margin-top: 2.5rem;
+}
+
+.markdown-preview ol>li.spacing-xlarge,
+.markdown-preview ul>li.spacing-xlarge {
+    margin-top: 3.5rem;
+}
+
+/* ========== VERSCHACHTELTE LISTEN ========== */
+.markdown-preview li>ul,
+.markdown-preview li>ol {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+}
+
+/* ========== ERSTE UND LETZTE ELEMENTE ========== */
+.markdown-preview>*:first-child {
+    margin-top: 0;
+}
+
+.markdown-preview>*:last-child {
+    margin-bottom: 0;
+}

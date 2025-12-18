@@ -1,0 +1,173 @@
+/**
+ * Globale Markdown Preview Styles
+ * Diese Datei in angular.json unter "styles" eintragen!
+ * Oder als ::ng-deep in der Komponente verwenden
+ */
+
+/* ========== ÜBERSCHRIFTEN ========== */
+.markdown-preview h1 {
+    font-size: 2rem;
+    font-weight: 700;
+    margin-top: 1.5rem;
+    margin-bottom: 1rem;
+    border-bottom: 2px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    color: #3498db;
+}
+
+.markdown-preview h2 {
+    font-size: 1.75rem;
+    font-weight: 600;
+    margin-top: 1.5rem;
+    margin-bottom: 0.75rem;
+    border-bottom: 1px solid #dee2e6;
+    padding-bottom: 0.5rem;
+    color: #3498db;
+}
+
+.markdown-preview h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-top: 1.25rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+.markdown-preview h4 {
+    font-size: 1.25rem;
+    font-weight: 600;
+    margin-top: 1rem;
+    margin-bottom: 0.5rem;
+    color: #2c3e50;
+}
+
+/* ========== HORIZONTALE LINIE ========== */
+.markdown-preview hr {
+    border: none;
+    border-top: 2px solid #dee2e6;
+    margin: 2rem 0;
+}
+
+/* ========== PARAGRAPHEN ========== */
+.markdown-preview p {
+    margin-bottom: 1rem;
+    line-height: 1.7;
+}
+
+/* ========== INLINE FORMATIERUNG ========== */
+.markdown-preview strong {
+    font-weight: 700;
+    color: #2c3e50;
+}
+
+.markdown-preview em {
+    font-style: italic;
+    color: #2c3e50;
+}
+
+.markdown-preview del {
+    text-decoration: line-through;
+    color: #999;
+}
+
+/* ========== ZITATE ========== */
+.markdown-preview blockquote {
+    border-left: 4px solid #3498db;
+    padding-left: 1rem;
+    margin: 1.5rem 0;
+    color: #666;
+    font-style: italic;
+    background-color: rgba(52, 152, 219, 0.05);
+    padding: 1rem;
+    border-radius: 4px;
+}
+
+.markdown-preview blockquote br {
+    display: block;
+    content: "";
+    margin-bottom: 0.5rem;
+}
+
+/* ========== LISTEN ========== */
+.markdown-preview ul,
+.markdown-preview ol {
+    margin-bottom: 1.5rem;
+    padding-left: 0;
+    list-style: none;
+}
+
+/* Unnummerierte Listen */
+.markdown-preview ul {
+    padding-left: 2rem;
+    list-style: disc;
+}
+
+.markdown-preview ul>li {
+    margin-bottom: 0.5rem;
+    line-height: 1.6;
+}
+
+/* Task-Listen Checkboxen */
+.markdown-preview ul li input[type="checkbox"] {
+    margin-right: 0.5rem;
+    cursor: default;
+    transform: scale(1.2);
+    accent-color: #2563eb;
+}
+
+/* List-Items mit Checkboxen ohne Bullet-Points */
+.markdown-preview ul li:has(input[type="checkbox"]) {
+    list-style: none;
+    margin-left: -2rem;
+    padding-left: 2rem;
+}
+
+/* Nummerierte Listen mit Kreisen */
+.markdown-preview ol {
+    counter-reset: list-counter;
+}
+
+.markdown-preview ol>li {
+    counter-increment: list-counter;
+    position: relative;
+    padding-left: 3rem;
+    margin-bottom: 0.75rem;
+    line-height: 1.6;
+}
+
+.markdown-preview ol>li::before {
+    content: counter(list-counter);
+    position: absolute;
+    left: 0;
+    top: 0;
+    width: 2rem;
+    height: 2rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+    color: white;
+    border-radius: 50%;
+    font-weight: 600;
+    font-size: 0.9rem;
+}
+
+/* ========== DYNAMISCHE ABSTÄNDE IN LISTEN ========== */
+.markdown-preview li.spacing-medium {
+    margin-top: 1.5rem;
+}
+
+.markdown-preview li.spacing-large {
+    margin-top: 2.5rem;
+}
+
+.markdown-preview li.spacing-xlarge {
+    margin-top: 3.5rem;
+}
+
+/* ========== LINE BREAKS ========== */
+.markdown-preview br {
+    display: block;
+    margin-bottom: 0.5rem;
+    content: "";
+}

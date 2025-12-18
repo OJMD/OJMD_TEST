@@ -13,73 +13,81 @@
 </head>
 
 <body>
-    <nav role="navigation" aria-label="Hauptnavigation">
-        <button class="menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
-            <span class="hamburger"></span>
+    <nav class="nav" role="navigation" aria-label="Hauptnavigation">
+        <button class="nav__menu-toggle" aria-label="Menü öffnen" aria-expanded="false">
+            <span class="nav__hamburger"></span>
         </button>
-        <h2>Admin Dashboard</h2>
+        <h2 class="nav__logo">Admin Dashboard</h2>
         <div class="spacer"></div>
-        <ul class="nav-links">
-            <li><a href="#" aria-current="page">Home</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Settings</a></li>
+        <ul class="nav__links">
+            <li class="nav__item"><a href="#" class="nav__link nav__link--active" aria-current="page">Home</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">About</a></li>
+            <li class="nav__item"><a href="#" class="nav__link">Settings</a></li>
         </ul>
-        <div class="user-avatar" role="button" tabindex="0" aria-label="Benutzerprofil"></div>
+        <div class="nav__user-avatar" role="button" tabindex="0" aria-label="Benutzerprofil"></div>
     </nav>
 
-    <aside role="complementary" aria-label="Sidebar Navigation" class="sidebar">
-        <nav class="sidebar-nav">
-            <h3>Dashboard</h3>
-            <ul>
-                <li><a href="#">📊 Übersicht</a></li>
-                <li><a href="#">📈 Analytics</a></li>
-                <li><a href="#">👥 Benutzer</a></li>
-                <li><a href="#">⚙️ Einstellungen</a></li>
-                <li><a href="#">📝 Berichte</a></li>
+    <aside class="sidebar" role="complementary" aria-label="Sidebar Navigation">
+        <nav class="sidebar__nav">
+            <h3 class="sidebar__title">Dashboard</h3>
+            <ul class="sidebar__list">
+                <li class="sidebar__item"><a href="#" class="sidebar__link">📊 Übersicht</a></li>
+                <li class="sidebar__item"><a href="#" class="sidebar__link">📈 Analytics</a></li>
+                <li class="sidebar__item"><a href="#" class="sidebar__link">👥 Benutzer</a></li>
+                <li class="sidebar__item"><a href="#" class="sidebar__link">⚙️ Einstellungen</a></li>
+                <li class="sidebar__item"><a href="#" class="sidebar__link">📝 Berichte</a></li>
             </ul>
         </nav>
     </aside>
 
-    <main role="main">
-        <h1>Willkommen im Admin Dashboard</h1>
-        <section class="dashboard-cards">
-            <article class="card">
-                <h3>Statistik 1</h3>
-                <p class="card-value">1,234</p>
-                <p class="card-label">Aktive Benutzer</p>
-            </article>
-            <article class="card">
-                <h3>Statistik 2</h3>
-                <p class="card-value">5,678</p>
-                <p class="card-label">Gesamt-Aufrufe</p>
-            </article>
-            <article class="card">
-                <h3>Statistik 3</h3>
-                <p class="card-value">89%</p>
-                <p class="card-label">Erfolgsrate</p>
-            </article>
-        </section>
-        <section class="test-gid">
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <div class="grid-item">Item 1</div>
-            <!-- <div class="grid-item" style="grid-area: box-1">Item 1</div>
-            <div class="grid-item" style="grid-area: box-2">Item 2</div>
-            <div class="grid-item" style="grid-area: box-3">Item 3</div>
-            <div class="grid-item" style="grid-area: box-4">Item 4</div>
-            <div class="grid-item" style="grid-area: box-5">Item 5</div> -->
-            <!-- <div class="grid-item" style="grid-area: box-6">Item 6</div> -->
+    <main class="main" role="main">
+        <header class="main__header">
+            <h2 class="main__title">Willkommen im Admin Dashboard</h2>
+        </header>
+
+        <div class="main__content">
+
+            <section class="dashboard">
+                <article class="dashboard__card">
+                    <h3 class="dashboard__card-title">Statistik 1</h3>
+                    <p class="dashboard__card-value">1,234</p>
+                    <p class="dashboard__card-label">Aktive Benutzer</p>
+                </article>
+                <article class="dashboard__card">
+                    <h3 class="dashboard__card-title">Statistik 2</h3>
+                    <p class="dashboard__card-value">5,678</p>
+                    <p class="dashboard__card-label">Gesamt-Aufrufe</p>
+                </article>
+                <article class="dashboard__card">
+                    <h3 class="dashboard__card-title">Statistik 3</h3>
+                    <p class="dashboard__card-value">89%</p>
+                    <p class="dashboard__card-label">Erfolgsrate</p>
+                </article>
+            </section>
+            <section class="search">
+                <div class="search__field">
+                    <label for="search" class="search__label">Suche:</label>
+                    <input type="datetime-local" id="search" name="search" class="search__input"
+                        placeholder="Suchbegriff eingeben">
+                </div>
+            </section>
+            <section class="grid-demo">
+                <div class="grid-demo__item">Item 1</div>
+                <div class="grid-demo__item">Item 2</div>
+                <div class="grid-demo__item">Item 3</div>
+                <div class="grid-demo__item">Item 4</div>
+                <!-- <div class="grid-demo__item">Item 5</div>
+                <div class="grid-demo__item">Item 6</div>
+                <div class="grid-demo__item">Item 7</div>
+                <div class="grid-demo__item">Item 8</div>
+                <div class="grid-demo__item">Item 9</div>
+                <div class="grid-demo__item">Item 10</div> -->
+            </section>
+        </div>
     </main>
 
-    <footer role="contentinfo">
-        <p>&copy; 2025 Admin Dashboard - Alle Rechte vorbehalten</p>
+    <footer class="footer" role="contentinfo">
+        <p class="footer__copyright">&copy; 2025 Admin Dashboard - Alle Rechte vorbehalten</p>
     </footer>
 </body>
 

@@ -1,6 +1,6 @@
 // Mobile Navigation Toggle
 document.addEventListener('DOMContentLoaded', () => {
-    const menuToggle = document.querySelector('.menu-toggle');
+    const menuToggle = document.querySelector('.nav__menu-toggle');
     const sidebar = document.querySelector('.sidebar');
     const body = document.body;
 
@@ -35,7 +35,7 @@ document.addEventListener('DOMContentLoaded', () => {
         });
 
         // Schließe Sidebar bei Klick auf Link
-        const sidebarLinks = sidebar.querySelectorAll('a');
+        const sidebarLinks = sidebar.querySelectorAll('.sidebar__link');
         sidebarLinks.forEach(link => {
             link.addEventListener('click', () => {
                 if (window.innerWidth <= 768) {
@@ -52,7 +52,7 @@ document.addEventListener('DOMContentLoaded', () => {
     }
 
     // User Avatar Keyboard Navigation
-    const userAvatar = document.querySelector('.user-avatar');
+    const userAvatar = document.querySelector('.nav__user-avatar');
     if (userAvatar) {
         userAvatar.addEventListener('keydown', (e) => {
             if (e.key === 'Enter' || e.key === ' ') {

@@ -1,0 +1,37 @@
+<div class="editor-container">
+    <!-- Toolbar -->
+    <div class="toolbar">
+        <div class="toolbar-left">
+            <h1 class="toolbar-title">📝 Markdown Editor</h1>
+        </div>
+        <div class="toolbar-right">
+            <button class="btn btn-copy" (click)="copyHtml()" [style.background-color]="copyButtonColor()">
+                {{ copyButtonText() }}
+            </button>
+            <button class="btn btn-clear" (click)="clearEditor()">
+                🗑️ Löschen
+            </button>
+        </div>
+    </div>
+
+    <!-- Editor-Bereich -->
+    <div class="editor-wrapper">
+        <!-- Markdown Input -->
+        <div class="editor-panel">
+            <div class="panel-header">Markdown</div>
+            <textarea class="markdown-input" [(ngModel)]="markdownText" (ngModelChange)="onMarkdownChange()"
+                (keydown)="onTab($event)" placeholder="Markdown hier eingeben..." spellcheck="false">
+      </textarea>
+        </div>
+
+        <!-- Vertikaler Trenner -->
+        <div class="divider"></div>
+
+        <!-- Preview -->
+        <div class="editor-panel">
+            <div class="panel-header">Vorschau</div>
+            <div class="markdown-preview" [innerHTML]="previewHtml()">
+            </div>
+        </div>
+    </div>
+</div>
